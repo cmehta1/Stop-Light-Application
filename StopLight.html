@@ -1,0 +1,27 @@
+<html ng-app="cityRoads" ng-controller="mainController">
+<head>
+    <link rel="stylesheet" href="./StopLight.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body ng-view>
+<h1>Stop Light Example</h1>
+
+<p>Traffic on which road need to stop: </p>{{activeTrafficDirection}}
+
+<div>
+
+    <div style="display: inline;align-content: center">
+    <div stop-light-directive direction="north-south"></div>
+    <div stop-light-directive direction="east-west"></div>
+    </div>
+
+    <div stop-light-switch-directive button-info='{ "type" : "toggleStopLights", "name" : "Toggle Stop Light" }'></div>
+    <p>Use following two buttons to Start and Stop Automatic 5 seconds Interval:(Please wait after pressing Start button)</p>
+    <div stop-light-switch-directive button-info='{ "type" : "startIntervalTraffic", "name" : "Start" }'></div>
+    <div stop-light-switch-directive button-info='{ "type" : "stopIntervalTraffic", "name" : "Stop" }'></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="./StopLight.js"></script>
+</body>
+</html>

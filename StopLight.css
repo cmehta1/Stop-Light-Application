@@ -1,0 +1,38 @@
+body {
+    margin: 5px;
+}
+
+/*! Light */
+#light {
+    background-color:black;
+    box-shadow: 0 0 4px rgba(0,0,0, .8);
+    overflow: hidden;
+    padding: 0 0 4px;
+    width: 80px;
+}
+
+/* Round colored Light*/
+#light span {
+    border-radius: 100px;
+    display: block;
+    height: 50px;
+    margin: 8px auto 0;
+    opacity: .5;
+    width: 50px;
+}
+
+/*! Light colours */
+#red    { background-color: red; }
+#yellow { background-color: yellow; }
+#green  { background-color: green; }
+
+/*! Active states */
+#light span.active    { opacity: 1; }
+#light #red.active    { box-shadow: 0 0 10px red; }
+#light #yellow.active { box-shadow: 0 0 10px yellow; }
+#light #green.active  { box-shadow: 0 0 10px green; }
+
+/*! Toggle button */
+button {
+    margin-top: 10px;
+}
